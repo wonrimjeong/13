@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "keyword.h"
 int is_whitespace(char c)
 {
 	if (c == ' '||
@@ -64,8 +65,9 @@ int main(int argc, char *argv[]) {
 	while(fget_word(fp, word)!= 0)
 	{
 		//word processing
-		printf("%s\n", word); // test one
+		count_word(word);
 	}	
+	print_word();
 	
 	fclose(fp);
 	return 0;
